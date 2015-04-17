@@ -4,9 +4,11 @@ import "fmt"
 
 type Clock int
 
-const TestVersion = 2
-const minutesPerDay = 1440
-const munitesPerHour = 60
+const (
+	TestVersion    = 2
+	minutesPerDay  = 1440
+	munitesPerHour = 60
+)
 
 func Time(hour, minutes int) Clock {
 	c := Clock((hour*munitesPerHour + minutes) % minutesPerDay)
